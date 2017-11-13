@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bulma.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,800" rel="stylesheet">
+    <title>Application</title>
+    <script src="countdown.js"></script>
+</head>
+
+<body>
+    <script>
+        const toggleBurger = () => {
+            document.querySelector('.navbar-menu').classList.toggle('is-active');
+            $(document).ready(function() {
+                $("#navbar-nav a").click(function(e) {
+                    var isActive = $(this).hasClass('is-active');
+                    $('.is-active').removeClass('is-active');
+                    if (!isActive) {
+                        $(this).addClass('is-active');
+                    }
+                });
+            });
+        };
+    </script>
+
+    <nav class="navbar" id="navbar" role="navigation" aria-label="main navigation" style="z-index: 10; ">
+        <div class="navbar-brand" style="margin-right: 30px;">
+            <a class="navbar-item" href="#top">
+                <h1 class="mopster" style="margin-right: 2px; color: black; box-sizing: border-box;">Shift Appens</h1>
+            </a>
+
+            <div class="burger navbar-burger" id="burger" onclick="toggleBurger()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start" id="navbar-nav">
+                <a class="navbar-item" href="index.html">
+                DASHBOARD
+              </a>
+                <a class="navbar-item mobile-nav" href="application.html">
+                APPLICATION
+              </a>
+                <a class="navbar-item mobile-nav" href="profile.html">
+                PROFILE
+              </a>
+                <a class="navbar-item mobile-nav" href="http://shiftappens.com">
+                2018
+              </a>
+            </div>
+            <div class="navbar-end">
+              <a class="navbar-item mobile-nav" href="http://shiftappens.com">
+                LOG OUT
+              </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="section">
+        <div class="container has-text-centered" style="margin-top: 48px;">
+            <div class="tabs is-fullwidth">
+                <ul>
+                    <li>
+                      <a>
+                        <span>Profile</span>
+                      </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-large">
+        <div class="section-left section-text">
+
+            <p class="title is-3">Name Surname,</p>
+            <p class="subtitle is-3"><strong>21</strong> years old</p>
+            <p class="subtitle is-3" style="margin-top: -24px;">from <strong>Coimbra</strong></p>
+
+            <p class="subtitle is-3"><strong>shiftappens</strong> on Github</p>
+            <p class="subtitle is-3" style="margin-top: -24px;"><strong>@shiftappens</strong> on Twitter</p>
+            <p class="subtitle is-3" style="margin-top: -24px;">Hosted on <strong><a href="http://www.shiftappens.com">www.shiftappens.com</a></strong></p>
+
+
+        </div>
+
+        <div class="section-right section-text">
+          <div class="section section-small">
+            <div class="section-left">
+              <p class="subtitle is-4">Shift Coins:</p>
+              <p class="title is-3">666</p>
+
+              <p class="subtitle is-4" style="margin-top: 24px;">Team:</p>
+              <p class="title is-3">Best Team</p>
+
+              <br>
+
+            </div>
+            <div class="section-right">
+              <figure class="image" style="max-width:320px;">
+                <img src="https://bulma.io/images/placeholders/256x256.png">
+              </figure>
+            </div>
+          </div>
+
+          <br>
+          <br>
+
+          <a class="button is-black is-fullwidth" href="application.html">Edit Profile</a>
+        </div>
+
+    </div>
+</body>
+</html>

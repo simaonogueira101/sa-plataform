@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bulma.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,800" rel="stylesheet">
+    <title>Application</title>
+    <script src="countdown.js"></script>
+</head>
+
+<body>
+    <script>
+        const toggleBurger = () => {
+            document.querySelector('.navbar-menu').classList.toggle('is-active');
+            $(document).ready(function() {
+                $("#navbar-nav a").click(function(e) {
+                    var isActive = $(this).hasClass('is-active');
+                    $('.is-active').removeClass('is-active');
+                    if (!isActive) {
+                        $(this).addClass('is-active');
+                    }
+                });
+            });
+        };
+    </script>
+
+    <nav class="navbar" id="navbar" role="navigation" aria-label="main navigation" style="z-index: 10; ">
+        <div class="navbar-brand" style="margin-right: 30px;">
+            <a class="navbar-item" href="#top">
+                <h1 class="mopster" style="margin-right: 2px; color: black; box-sizing: border-box;">Shift Appens</h1>
+            </a>
+
+            <div class="burger navbar-burger" id="burger" onclick="toggleBurger()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start" id="navbar-nav">
+                <a class="navbar-item" href="index.html">
+                DASHBOARD
+              </a>
+                <a class="navbar-item mobile-nav" href="application.html">
+                APPLICATION
+              </a>
+                <a class="navbar-item mobile-nav" href="profile.html">
+                PROFILE
+              </a>
+                <a class="navbar-item mobile-nav" href="http://shiftappens.com">
+                2018
+              </a>
+            </div>
+            <div class="navbar-end">
+              <a class="navbar-item mobile-nav" href="http://shiftappens.com">
+                LOG OUT
+              </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="section">
+        <div class="container has-text-centered" style="margin-top: 48px;">
+            <div class="tabs is-fullwidth">
+                <ul>
+                    <li>
+                        <a href="application.html">
+                            <span>Bio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pitch.html">
+                            <span>Pitch</span>
+                        </a>
+                    </li>
+                    <li class="is-active">
+                        <a href="more.html">
+                            <span>More</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-large">
+        <div class="section-left section-text">
+            <h1 class="title is-3"><span class="mopster">Step 3 -</span> What's there more to know?</h1>
+
+            <div class="field">
+              <label class="label">First time <span class="mopster">Shiftin'</span>?</label>
+              <div class="control">
+                <label class="radio">
+                  <input type="radio" name="question">
+                  Yes
+                </label>
+                <label class="radio">
+                  <input type="radio" name="question">
+                  No
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">T-shirt Size?</label>
+              <div class="control is-expanded">
+                <div class="select is-fullwidth">
+                  <select>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Anything else on why you should come shift with us?</label>
+              <div class="control">
+                <textarea class="textarea" placeholder="Duh!... I'm super awesome!" style="resize: none;"></textarea>
+              </div>
+            </div>
+        </div>
+
+        <div class="section-right section-text">
+
+            <div class="field">
+              <label class="label">Github</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="shiftappens">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Twitter</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="@shiftappens">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Website</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="www.shiftappens.com">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Portfolio</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="www.behance.com/we_don't_have_one...yet!">
+              </div>
+            </div>
+            <br>
+
+            <a class="button is-black is-fullwidth" href="profile.html">Save!</a>
+        </div>
+
+    </div>
+</body>
+</html>

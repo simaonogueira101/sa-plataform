@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bulma.css">
+    <link rel="stylesheet" href="taggle/taggle.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,800" rel="stylesheet">
+    <title>Application</title>
+    <script src="countdown.js"></script>
+</head>
+
+<body>
+  <script src="taggle/jquery-1.10.1.js"></script>
+  <script src="taggle/jquery-ui.js"></script>
+  <script src="taggle/taggle.min.js"></script>
+  <script src="taggle/scripts.js"></script>
+  <script>
+      const toggleBurger = () => {
+          document.querySelector('.navbar-menu').classList.toggle('is-active');
+          $(document).ready(function() {
+              $("#navbar-nav a").click(function(e) {
+                  var isActive = $(this).hasClass('is-active');
+                  $('.is-active').removeClass('is-active');
+                  if (!isActive) {
+                      $(this).addClass('is-active');
+                  }
+              });
+          });
+      };
+  </script>
+
+    <nav class="navbar" id="navbar" role="navigation" aria-label="main navigation" style="z-index: 10; ">
+        <div class="navbar-brand" style="margin-right: 30px;">
+            <a class="navbar-item" href="#top">
+                <h1 class="mopster" style="margin-right: 2px; color: black; box-sizing: border-box;">Shift Appens</h1>
+            </a>
+
+            <div class="burger navbar-burger" id="burger" onclick="toggleBurger()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start" id="navbar-nav">
+                <a class="navbar-item" href="index.html">
+                DASHBOARD
+              </a>
+                <a class="navbar-item mobile-nav" href="application.html">
+                APPLICATION
+              </a>
+                <a class="navbar-item mobile-nav" href="profile.html">
+                PROFILE
+              </a>
+                <a class="navbar-item mobile-nav" href="http://shiftappens.com">
+                2018
+              </a>
+            </div>
+            <div class="navbar-end">
+              <a class="navbar-item mobile-nav" href="http://shiftappens.com">
+                LOG OUT
+              </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="section">
+        <div class="container has-text-centered" style="margin-top: 48px;">
+            <div class="tabs is-fullwidth">
+                <ul>
+                    <li>
+                        <a href="application.html">
+                            <span>Bio</span>
+                        </a>
+                    </li>
+                    <li class="is-active">
+                        <a href="pitch.html">
+                            <span>Pitch</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="more.html">
+                            <span>More</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-large">
+        <div class="section-left section-text">
+            <h1 class="title is-3"><span class="mopster">Step 2 -</span> Show us you're a real <span class="mopster">Shifter</span></h1>
+
+            <div class="field">
+              <label class="label">Pitch</label>
+              <div class="control">
+                <textarea class="textarea" placeholder="Give us all you've got, show us why we need to have you!" style="resize: none;"></textarea>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Skills</label>
+              <div id="skills" class="input textarea" style="resize: auto;"></div>
+              <script>
+                var example = new Taggle('skills', {
+                  tags: ['Super Awesome Shifter', 'coding in a hurry', 'php']
+                });
+              </script>
+            </div>
+        </div>
+
+        <div class="section-right section-text">
+            <h1 class="title is-3">You've got this!</h1>
+            <span class="margin-24"></span>
+            <p class="subtitle is-5">
+                How long has it been? Like 2 seconds?
+            </p>
+
+            <a class="button is-black is-fullwidth" href="more.html">Next Step</a>
+        </div>
+
+    </div>
+</body>
+</html>

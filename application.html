@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bulma.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,800" rel="stylesheet">
+    <title>Application</title>
+    <script src="countdown.js"></script>
+</head>
+
+<body>
+    <script>
+        const toggleBurger = () => {
+            document.querySelector('.navbar-menu').classList.toggle('is-active');
+            $(document).ready(function() {
+                $("#navbar-nav a").click(function(e) {
+                    var isActive = $(this).hasClass('is-active');
+                    $('.is-active').removeClass('is-active');
+                    if (!isActive) {
+                        $(this).addClass('is-active');
+                    }
+                });
+            });
+        };
+    </script>
+
+    <nav class="navbar" id="navbar" role="navigation" aria-label="main navigation" style="z-index: 10; ">
+        <div class="navbar-brand" style="margin-right: 30px;">
+            <a class="navbar-item" href="#top">
+                <h1 class="mopster" style="margin-right: 2px; color: black; box-sizing: border-box;">Shift Appens</h1>
+            </a>
+
+            <div class="burger navbar-burger" id="burger" onclick="toggleBurger()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start" id="navbar-nav">
+                <a class="navbar-item" href="index.html">
+                DASHBOARD
+              </a>
+                <a class="navbar-item mobile-nav" href="application.html">
+                APPLICATION
+              </a>
+                <a class="navbar-item mobile-nav" href="profile.html">
+                PROFILE
+              </a>
+                <a class="navbar-item mobile-nav" href="http://shiftappens.com">
+                2018
+              </a>
+            </div>
+            <div class="navbar-end">
+              <a class="navbar-item mobile-nav" href="http://shiftappens.com">
+                LOG OUT
+              </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="section">
+        <div class="container has-text-centered" style="margin-top: 48px;">
+            <div class="tabs is-fullwidth">
+                <ul>
+                    <li class="is-active">
+                        <a href="application.html">
+                            <span>Bio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pitch.html">
+                            <span>Pitch</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="more.html">
+                            <span>More</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-large">
+        <div class="section-left section-text">
+            <h1 class="title is-3"><span class="mopster">Step 1 -</span> Check your info</h1>
+
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Awesome Shifter's Name">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Age</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="21">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Where are you from?</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Coimbra?">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">What do you look like?</label>
+              <div class="file has-name is-fullwidth">
+                <label class="file-label">
+                  <input class="file-input" type="file" name="resume">
+                  <span class="file-cta">
+                    <span class="file-label">
+                      Choose a file…
+                    </span>
+                  </span>
+                  <span class="file-name">
+                    profile.jpg
+                  </span>
+                </label>
+              </div>
+            </div>
+        </div>
+
+        <div class="section-right section-text">
+            <h1 class="title is-3">Answer with care!</h1>
+            <span class="margin-24"></span>
+            <p class="subtitle is-5">
+                Don't wanna make a mistake here... What if we get your name wrong?
+            </p>
+
+            <div class="field">
+              <label class="label">What do you do?</label>
+              <div class="control is-expanded">
+                <div class="select is-fullwidth">
+                  <select>
+                    <option>Developer</option>
+                    <option>Designer</option>
+                    <option>Research</option>
+                    <option>Marketeer</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="field">
+              <label class="label">Are you a student?</label>
+              <div class="control">
+                <label class="radio">
+                  <input type="radio" name="question">
+                  Yes
+                </label>
+                <label class="radio">
+                  <input type="radio" name="question">
+                  No
+                </label>
+              </div>
+            </div>
+
+            <br>
+
+            <a class="button is-black is-fullwidth" href="pitch.html">Next Step</a>
+        </div>
+
+    </div>
+</body>
+</html>
