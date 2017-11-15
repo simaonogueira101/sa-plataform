@@ -17,7 +17,7 @@
   padding-right: 30px;
   box-sizing: border-box;
   width: 100%;
-  background: linear-gradient(to right, #DF3C4B, #F2684A , #66D7D1) !important;
+  background: linear-gradient(to right, #DF3C4B, #F2684A) !important;
 }
 
 .navbar-burger {
